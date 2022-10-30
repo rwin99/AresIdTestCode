@@ -1,4 +1,15 @@
+Run Program:
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+- php artisan jwt:secret
+- edit env set database
+- php artisan migrate
+- php artisan serve
+
 ```json
+
+
 Register
 url : {url:port} /api/register
 Method: POST
