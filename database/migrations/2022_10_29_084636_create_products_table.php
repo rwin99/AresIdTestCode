@@ -15,6 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('varian', function (Blueprint $table) {
             $table->increments('id')->unsigned();
+            $table->integer('id_product');
             $table->string('name');
             $table->string('sku');
             $table->integer('price');
@@ -25,8 +26,6 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('sku');
             $table->string('brand');
-            $table->integer('id_varian');
-            $table->foreign('id_varian')->references('id')->on('varian');
             $table->timestamps();
         });
 
